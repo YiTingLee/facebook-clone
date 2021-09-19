@@ -65,6 +65,7 @@ export default {
   animation: opacity 0.3s;
   animation-delay: 1s;
   animation-fill-mode: forwards;
+  font-size: 14px;
 }
 
 @keyframes opacity {

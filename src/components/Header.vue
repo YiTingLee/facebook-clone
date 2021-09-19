@@ -16,7 +16,22 @@
       <IconButton
         :class="$style.icon_button"
         :icon="{ prefix: 'fas', iconName: 'bars' }"
-        tip="menu"
+        tip="Menu"
+      ></IconButton>
+      <IconButton
+        :class="$style.icon_button"
+        :icon="{ prefix: 'fas', iconName: 'comment' }"
+        tip="Messenger"
+      ></IconButton>
+      <IconButton
+        :class="$style.icon_button"
+        :icon="{ prefix: 'fas', iconName: 'bell' }"
+        tip="Notifications"
+      ></IconButton>
+      <IconButton
+        :class="$style.icon_button"
+        :icon="{ prefix: 'fas', iconName: 'sort-down' }"
+        tip="Account"
       ></IconButton>
     </div>
   </div>
@@ -53,7 +68,7 @@ export default {
 .header_right {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .icon_button {
