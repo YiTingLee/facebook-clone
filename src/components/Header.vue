@@ -14,6 +14,17 @@
     <div></div>
     <div :class="$style.header_right">
       <IconButton
+        :class="$style.user_button"
+        :iconStyle="{
+          width: '28px',
+          height: '28px',
+          backgroundColor: '#000000',
+          borderRadius: '15px'
+        }"
+        :image="require('../assets/logo.png')"
+        label="Eric"
+      ></IconButton>
+      <IconButton
         :class="$style.icon_button"
         :icon="{ prefix: 'fas', iconName: 'bars' }"
         tip="Menu"
@@ -80,5 +91,18 @@ export default {
 
 .icon_button:hover {
   background-color: #d4d6db;
+}
+
+.user_button {
+  width: auto;
+  height: 32px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 12px;
+}
+
+.user_button:hover {
+  background-color: #e4e6eb;
 }
 </style>

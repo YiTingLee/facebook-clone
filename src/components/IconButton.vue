@@ -4,7 +4,8 @@
     @mouseover="isHover = true"
     @mouseleave="isHover = false"
   >
-    <font-awesome-icon :style="iconStyle" :icon="icon" />
+    <font-awesome-icon v-if="!image" :style="iconStyle" :icon="icon" />
+    <img v-else :src="image" :style="iconStyle" />
     <div :class="$style.label" v-if="label">{{ label }}</div>
     <div :class="$style.tip" v-if="tip && isHover">{{ tip }}</div>
   </div>
@@ -29,6 +30,10 @@ export default {
     tip: {
       type: String,
       default: null
+    },
+    image: {
+      type: String,
+      default: null
     }
   },
   data() {
@@ -46,7 +51,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
   position: relative;
 }
 
