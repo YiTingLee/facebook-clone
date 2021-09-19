@@ -1,12 +1,15 @@
 <template>
   <div :class="$style.header">
     <div :class="$style.header_left">
-      <div>
-        <font-awesome-icon
-          style="width: 40px; height: 40px; color: #0271E5"
-          :icon="{ prefix: 'fab', iconName: 'facebook' }"
-        />
-      </div>
+      <IconButton
+        :icon="{ prefix: 'fab', iconName: 'facebook' }"
+        :iconStyle="{
+          width: '40px',
+          height: '40px',
+          color: '#ff1694',
+          borderRadius: '15px'
+        }"
+      ></IconButton>
       <div>
         <SearchBar />
       </div>
@@ -73,7 +76,7 @@ export default {
 .header_left {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
 }
 
 .header_right {
