@@ -14,7 +14,9 @@
         <SearchBar />
       </div>
     </div>
-    <div></div>
+    <div>
+      <Tabs></Tabs>
+    </div>
     <div :class="$style.header_right">
       <IconButton
         :class="$style.user_button"
@@ -54,12 +56,14 @@
 <script>
 import SearchBar from "./SearchBar.vue";
 import IconButton from "./IconButton.vue";
+import Tabs from "./Tabs.vue";
 
 export default {
   name: "Header",
   components: {
     SearchBar,
-    IconButton
+    IconButton,
+    Tabs
   }
 };
 </script>
