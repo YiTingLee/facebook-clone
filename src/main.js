@@ -16,6 +16,7 @@ import {
   faSortDown,
   faStoreAlt
 } from "@fortawesome/free-solid-svg-icons";
+import store from "./store";
 
 library.add(faFacebook);
 library.add(faSearch);
@@ -30,5 +31,6 @@ library.add(faStoreAlt);
 library.add(faGamepad);
 
 createApp(App)
+  .use(store)
   .component("font-awesome-icon", FontAwesomeIcon)
   .mount("#app");

@@ -29,6 +29,8 @@
 
 <script>
 import IconButton from "./IconButton.vue";
+import { mapGetters } from "vuex";
+
 export default {
   name: "Tabs",
   components: {
@@ -57,7 +59,7 @@ export default {
           iconPrefix: "far",
           icon: "play-circle",
           tip: "Watch",
-          notifications: 20
+          notifications: 0
         },
         {
           id: 3,
@@ -71,10 +73,25 @@ export default {
           iconPrefix: "fas",
           icon: "gamepad",
           tip: "Gaming",
-          notifications: 5
+          notifications: 0
         }
       ]
     };
+  },
+  computed: mapGetters({
+    notifications: "notifications"
+  }),
+  mounted() {
+    this.$store.dispatch("fetchNotifications");
+  },
+  watch: {
+    notifications(newNotifications) {
+      this.tabs.forEach(tab => {
+        tab.notifications = newNotifications.notifications.find(
+          i => i.id === tab.id
+        ).num;
+      });
+    }
   }
 };
 </script>
