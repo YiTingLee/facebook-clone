@@ -38,5 +38,6 @@ export default {
   display: flex;
   justify-content: space-between;
   flex: 1;
+  height: calc(100% - 56px); /* minus header */
 }
 </style>

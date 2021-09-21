@@ -7,28 +7,57 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import {
   faBars,
   faBell,
+  faCalendarAlt,
+  faCameraRetro,
+  faClinicMedical,
+  faCloud,
   faComment,
   faFlag,
   faGamepad,
   faHome,
   faPlayCircle,
+  faPoll,
+  faSchool,
   faSearch,
   faSortDown,
-  faStoreAlt
+  faStar,
+  faStoreAlt,
+  faSuitcase,
+  faTags,
+  faTint,
+  faUserFriends,
+  faUsers,
+  faVideo
 } from "@fortawesome/free-solid-svg-icons";
 import store from "./store";
 
-library.add(faFacebook);
-library.add(faSearch);
-library.add(faBars);
-library.add(faComment);
-library.add(faBell);
-library.add(faSortDown);
-library.add(faHome);
-library.add(faFlag);
-library.add(faPlayCircle);
-library.add(faStoreAlt);
-library.add(faGamepad);
+library.add(
+  faFacebook,
+  faSearch,
+  faBars,
+  faComment,
+  faBell,
+  faSortDown,
+  faSortDown,
+  faHome,
+  faFlag,
+  faPlayCircle,
+  faStoreAlt,
+  faGamepad,
+  faUserFriends,
+  faStar,
+  faClinicMedical,
+  faUsers,
+  faVideo,
+  faPoll,
+  faTint,
+  faSchool,
+  faCalendarAlt,
+  faSuitcase,
+  faCloud,
+  faCameraRetro,
+  faTags
+);
 
 createApp(App)
   .use(store)
