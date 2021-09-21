@@ -26,8 +26,8 @@
           backgroundColor: '#000000',
           borderRadius: '15px'
         }"
-        :image="require('../assets/logo.png')"
-        label="Eric"
+        :image="user.image"
+        :label="user.userName"
       ></IconButton>
       <IconButton
         :class="$style.icon_button"
@@ -57,6 +57,7 @@
 import SearchBar from "./SearchBar.vue";
 import IconButton from "./IconButton.vue";
 import Tabs from "./Tabs.vue";
+import { mapGetters } from "vuex";
 
 export default {
   name: "Header",
@@ -64,7 +65,8 @@ export default {
     SearchBar,
     IconButton,
     Tabs
-  }
+  },
+  computed: mapGetters({ user: "user" })
 };
 </script>
 

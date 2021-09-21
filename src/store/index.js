@@ -3,11 +3,20 @@ import { notificationsApi } from "../mock/mockApi";
 
 const store = createStore({
   state: {
+    user: {
+      userId: "eric",
+      userName: "Eric",
+      token: "token",
+      image: require("../assets/logo.png")
+    },
     notifications: []
   },
   getters: {
     notifications(state) {
       return state.notifications;
+    },
+    user(state) {
+      return state.user;
     }
   },
   mutations: {
