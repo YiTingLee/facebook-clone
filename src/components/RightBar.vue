@@ -1,10 +1,17 @@
 <template>
-  <div :class="$style.right_bar">Right</div>
+  <div :class="$style.right_bar">
+    <Contacts />
+  </div>
 </template>
 
 <script>
+import Contacts from "./Contacts.vue";
+
 export default {
-  name: "RightBar"
+  name: "RightBar",
+  components: {
+    Contacts
+  }
 };
 </script>
 

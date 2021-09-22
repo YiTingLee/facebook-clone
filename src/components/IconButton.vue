@@ -57,7 +57,8 @@ export default {
 
 .label {
   font-size: 15px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .tip {
@@ -72,6 +73,8 @@ export default {
   animation-delay: 1s;
   animation-fill-mode: forwards;
   font-size: 14px;
+  white-space: nowrap;
+  z-index: 10;
 }
 
 @keyframes opacity {

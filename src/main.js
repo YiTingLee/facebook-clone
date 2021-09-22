@@ -12,6 +12,7 @@ import {
   faClinicMedical,
   faCloud,
   faComment,
+  faEllipsisH,
   faFlag,
   faGamepad,
   faHome,
@@ -56,7 +57,8 @@ library.add(
   faSuitcase,
   faCloud,
   faCameraRetro,
-  faTags
+  faTags,
+  faEllipsisH
 );
 
 createApp(App)
