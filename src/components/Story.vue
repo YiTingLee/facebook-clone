@@ -24,7 +24,7 @@ export default {
   props: {
     image: {
       type: String,
-      default: require('../assets/person.png'),
+      default: '',
     },
     userName: {
       type: String,
@@ -32,7 +32,7 @@ export default {
     },
     userIcon: {
       type: String,
-      default: require('../assets/person.png'),
+      default: '',
     },
     hasAddFunction: {
       type: Boolean,

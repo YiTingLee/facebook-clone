@@ -99,3 +99,36 @@ export const friendsApi = async userToken => {
     },
   ]);
 };
+
+export const storiesApi = async userToken => {
+  return Promise.resolve([
+    {
+      id: 0,
+      userId: 0,
+      image: require('../assets/person.png'),
+      userName: 'Penny',
+      userIcon: require('../assets/person.png'),
+    },
+    {
+      id: 1,
+      userId: 4,
+      image: require('../assets/person.png'),
+      userName: 'Anni',
+      userIcon: require('../assets/person.png'),
+    },
+    {
+      id: 2,
+      userId: 9,
+      image: require('../assets/person.png'),
+      userName: 'Joseph',
+      userIcon: require('../assets/person.png'),
+    },
+    {
+      id: 3,
+      userId: 11,
+      image: require('../assets/person.png'),
+      userName: 'Max',
+      userIcon: require('../assets/person.png'),
+    },
+  ]);
+};

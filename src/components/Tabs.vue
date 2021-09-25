@@ -112,7 +112,7 @@ export default {
 }
 
 .tab {
-  width: 130px;
+  width: 136px;
   height: 53px;
   border-radius: 12px;
   position: relative;

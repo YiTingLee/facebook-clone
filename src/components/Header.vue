@@ -2,6 +2,7 @@
   <div :class="$style.header">
     <div :class="$style.header_left">
       <IconButton
+        :class="$style.logo"
         :icon="{ prefix: 'fab', iconName: 'facebook' }"
         :iconStyle="{
           width: '40px',
@@ -76,15 +77,24 @@ export default {
 }
 
 .header_left {
+  min-width: 280px;
+  width: 360px;
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
 .header_right {
+  min-width: 280px;
+  width: 360px;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   gap: 8px;
+}
+
+.logo {
+  width: auto;
 }
 
 .icon_button {
