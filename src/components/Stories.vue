@@ -49,6 +49,7 @@ export default {
   background-color: #fff;
   border-radius: 20px;
   border: 1px solid #ddd;
+  z-index: 10;
 }
 
 .arrow_butotn:hover {
