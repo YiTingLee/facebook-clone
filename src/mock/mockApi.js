@@ -1,5 +1,4 @@
 export const notificationsApi = async userToken => {
-  console.log(userToken); // user token will be used in the real api server
   return Promise.resolve({
     notifications: [
       { id: 0, name: "Home", num: 0 },
@@ -12,7 +11,6 @@ export const notificationsApi = async userToken => {
 };
 
 export const friendsApi = async userToken => {
-  console.log(userToken);
   return Promise.resolve([
     {
       id: 0,
