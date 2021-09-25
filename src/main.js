@@ -5,6 +5,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import {
+  faArrowRight,
   faBars,
   faBell,
   faCalendarAlt,
@@ -60,7 +61,8 @@ library.add(
   faCameraRetro,
   faTags,
   faEllipsisH,
-  faPlus
+  faPlus,
+  faArrowRight
 );
 
 createApp(App)
