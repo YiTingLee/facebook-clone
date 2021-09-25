@@ -1,5 +1,5 @@
 import { createStore } from "vuex";
-import { notificationsApi } from "../mock/mockApi";
+import { friendsApi, notificationsApi } from "../mock/mockApi";
 
 const store = createStore({
   state: {
@@ -9,7 +9,8 @@ const store = createStore({
       token: "token",
       image: require("../assets/logo.png")
     },
-    notifications: []
+    notifications: [],
+    friends: []
   },
   getters: {
     notifications(state) {
@@ -17,18 +18,29 @@ const store = createStore({
     },
     user(state) {
       return state.user;
+    },
+    friends(state) {
+      return state.friends;
     }
   },
   mutations: {
     SAVE_NOTIFICATIONS(state, notifications) {
       state.notifications = notifications;
+    },
+    SAVE_FRIENDS(state, friends) {
+      state.friends = friends;
     }
   },
   actions: {
     async fetchNotifications({ state, commit }) {
       const notifications = await notificationsApi(state.userToken);
       commit("SAVE_NOTIFICATIONS", notifications);
-    }
+    },
+    async fetchFriends({ state, commit }) {
+      const friends = await friendsApi(state.userToken);
+      commit("SAVE_FRIENDS", friends);
+    },
+    
   }
 });
 

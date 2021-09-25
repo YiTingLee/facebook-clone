@@ -10,3 +10,94 @@ export const notificationsApi = async userToken => {
     ]
   });
 };
+
+export const friendsApi = async userToken => {
+  console.log(userToken);
+  return Promise.resolve([
+    {
+      id: 0,
+      image: require("../assets/person.png"),
+      label: "Frank"
+    },
+    {
+      id: 1,
+      image: require("../assets/person.png"),
+      label: "Penny"
+    },
+    {
+      id: 2,
+      image: require("../assets/person.png"),
+      label: "Hank"
+    },
+    {
+      id: 3,
+      image: require("../assets/person.png"),
+      label: "Bill"
+    },
+    {
+      id: 4,
+      image: require("../assets/person.png"),
+      label: "Hebert"
+    },
+    {
+      id: 5,
+      image: require("../assets/person.png"),
+      label: "Tom"
+    },
+    {
+      id: 6,
+      image: require("../assets/person.png"),
+      label: "Sam"
+    },
+    {
+      id: 7,
+      image: require("../assets/person.png"),
+      label: "Hubert"
+    },
+    {
+      id: 8,
+      image: require("../assets/person.png"),
+      label: "Tim"
+    },
+    {
+      id: 9,
+      image: require("../assets/person.png"),
+      label: "Andy"
+    },
+    {
+      id: 10,
+      image: require("../assets/person.png"),
+      label: "Gary"
+    },
+    {
+      id: 11,
+      image: require("../assets/person.png"),
+      label: "Alex"
+    },
+    {
+      id: 10,
+      image: require("../assets/person.png"),
+      label: "Ava"
+    },
+    {
+      id: 10,
+      image: require("../assets/person.png"),
+      label: "Betty"
+    },
+    {
+      id: 10,
+      image: require("../assets/person.png"),
+      label: "Carla"
+    },
+    {
+      id: 10,
+      image: require("../assets/person.png"),
+      label: "Cathy"
+    },
+    {
+      id: 10,
+      image: require("../assets/person.png"),
+      label: "Cindy"
+    }
+  ]);
+};

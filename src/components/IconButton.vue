@@ -4,8 +4,11 @@
     @mouseover="isHover = true"
     @mouseleave="isHover = false"
   >
-    <font-awesome-icon v-if="!image" :style="iconStyle" :icon="icon" />
-    <img v-else :src="image" :style="iconStyle" />
+    <div :class="$style.image_container">
+      <font-awesome-icon v-if="!image" :style="iconStyle" :icon="icon" />
+      <img v-else :src="image" :style="iconStyle" />
+      <div v-if="isOnline" :class="$style.online"></div>
+    </div>
     <div :class="$style.label" v-if="label">{{ label }}</div>
     <div :class="$style.tip" v-if="tip && isHover">{{ tip }}</div>
   </div>
@@ -34,6 +37,10 @@ export default {
     image: {
       type: String,
       default: null
+    },
+    isOnline: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -52,6 +59,10 @@ export default {
   justify-content: center;
   align-items: center;
   gap: 6px;
+  position: relative;
+}
+
+.image_container {
   position: relative;
 }
 
@@ -84,5 +95,16 @@ export default {
   to {
     opacity: 1;
   }
+}
+
+.online {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  background: #31a24c;
+  border-radius: 15px;
+  border: 2px solid #f0f2f5;
+  bottom: 0px;
+  right: 0px;
 }
 </style>

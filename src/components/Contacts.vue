@@ -23,16 +23,38 @@
         ></IconButton>
       </div>
     </div>
+    <div :class="$style.friends_container">
+      <div :class="$style.row" v-for="friend in friends" :key="friend.id">
+        <IconButton
+          :class="$style.friend"
+          :iconStyle="{
+            width: '32px',
+            height: '32px',
+            borderRadius: '20px'
+          }"
+          :image="friend.image"
+          :label="friend.label"
+          :isOnline="true"
+        ></IconButton>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import IconButton from "./IconButton.vue";
 
 export default {
   name: "Contacts",
   components: {
     IconButton
+  },
+  computed: {
+    ...mapGetters({ friends: "friends" })
+  },
+  mounted() {
+    this.$store.dispatch("fetchFriends");
   }
 };
 </script>
@@ -40,6 +62,10 @@ export default {
 <style module>
 .contacts_container {
   padding: 12px 8px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .contacts_header_container {
@@ -72,5 +98,25 @@ export default {
 
 .icon_button:hover {
   background-color: #d4d6db;
+}
+
+.friends_container {
+  flex: 1;
+}
+
+.row {
+  width: 100%;
+  height: 52px;
+}
+
+.friend {
+  padding: 6px;
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 6px;
+}
+
+.friend:hover {
+  background-color: #e4e6eb;
 }
 </style>

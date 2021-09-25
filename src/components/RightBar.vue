@@ -19,5 +19,7 @@ export default {
 .right_bar {
   min-width: 280px;
   width: 360px;
+  height: 100%;
+  overflow-y: scroll;
 }
 </style>

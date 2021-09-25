@@ -25,7 +25,6 @@ export default {
   computed: {
     ...mapGetters({ user: "user" }),
     pages() {
-      console.log("user:", this.user);
       return [
         {
           id: 0,
@@ -151,7 +150,7 @@ export default {
 .left_bar {
   min-width: 280px;
   width: 360px;
-  height: calc(100% - 16px); /* minus padding */
+  height: 100%;
   padding: 8px;
   overflow-y: scroll;
 }
