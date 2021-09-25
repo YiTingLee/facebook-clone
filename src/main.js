@@ -17,6 +17,7 @@ import {
   faGamepad,
   faHome,
   faPlayCircle,
+  faPlus,
   faPoll,
   faSchool,
   faSearch,
@@ -58,7 +59,8 @@ library.add(
   faCloud,
   faCameraRetro,
   faTags,
-  faEllipsisH
+  faEllipsisH,
+  faPlus
 );
 
 createApp(App)

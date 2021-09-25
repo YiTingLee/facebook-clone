@@ -1,9 +1,13 @@
 <template>
-  <div>Test</div>
+  <div>
+    <Story></Story>
+  </div>
 </template>
 
 <script>
+import Story from './Story.vue';
 export default {
+  components: { Story },
   name: 'Stories',
 };
 </script>
