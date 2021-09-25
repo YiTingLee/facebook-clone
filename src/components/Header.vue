@@ -7,7 +7,7 @@
           width: '40px',
           height: '40px',
           color: '#ff1694',
-          borderRadius: '15px'
+          borderRadius: '15px',
         }"
       ></IconButton>
       <div>
@@ -24,16 +24,12 @@
           width: '28px',
           height: '28px',
           backgroundColor: '#000000',
-          borderRadius: '15px'
+          borderRadius: '15px',
         }"
         :image="user.image"
         :label="user.userName"
       ></IconButton>
-      <IconButton
-        :class="$style.icon_button"
-        :icon="{ prefix: 'fas', iconName: 'bars' }"
-        tip="Menu"
-      ></IconButton>
+      <IconButton :class="$style.icon_button" :icon="{ prefix: 'fas', iconName: 'bars' }" tip="Menu"></IconButton>
       <IconButton
         :class="$style.icon_button"
         :icon="{ prefix: 'fas', iconName: 'comment' }"
@@ -54,19 +50,19 @@
 </template>
 
 <script>
-import SearchBar from "./SearchBar.vue";
-import IconButton from "./IconButton.vue";
-import Tabs from "./Tabs.vue";
-import { mapGetters } from "vuex";
+import SearchBar from './SearchBar.vue';
+import IconButton from './IconButton.vue';
+import Tabs from './Tabs.vue';
+import { mapGetters } from 'vuex';
 
 export default {
-  name: "Header",
+  name: 'Header',
   components: {
     SearchBar,
     IconButton,
-    Tabs
+    Tabs,
   },
-  computed: mapGetters({ user: "user" })
+  computed: mapGetters({ user: 'user' }),
 };
 </script>
 

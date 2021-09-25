@@ -30,7 +30,7 @@
           :iconStyle="{
             width: '32px',
             height: '32px',
-            borderRadius: '20px'
+            borderRadius: '20px',
           }"
           :image="friend.image"
           :label="friend.label"
@@ -42,20 +42,20 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import IconButton from "./IconButton.vue";
+import { mapGetters } from 'vuex';
+import IconButton from './IconButton.vue';
 
 export default {
-  name: "Contacts",
+  name: 'Contacts',
   components: {
-    IconButton
+    IconButton,
   },
   computed: {
-    ...mapGetters({ friends: "friends" })
+    ...mapGetters({ friends: 'friends' }),
   },
   mounted() {
-    this.$store.dispatch("fetchFriends");
-  }
+    this.$store.dispatch('fetchFriends');
+  },
 };
 </script>
 
@@ -77,8 +77,8 @@ export default {
 
 .contacts_header {
   flex: 1;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
   font-size: 17px;
   font-weight: 600;
   color: #65676b;

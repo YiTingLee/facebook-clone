@@ -1,10 +1,16 @@
 <template>
-  <div>Main</div>
+  <div>
+    <Stories></Stories>
+  </div>
 </template>
 
 <script>
+import Stories from './Stories.vue';
 export default {
-  name: "Main"
+  name: 'Main',
+  components: {
+    Stories,
+  },
 };
 </script>
 

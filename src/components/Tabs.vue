@@ -3,21 +3,21 @@
     <div
       :class="{
         [$style.tab_container]: true,
-        [$style.active]: tab.id === activeId
+        [$style.active]: tab.id === activeId,
       }"
       v-for="tab in tabs"
       :key="tab.id"
     >
       <div :class="$style.tab">
         <div v-if="tab.notifications" :class="$style.notifications">
-          {{ tab.notifications > 9 ? "9+" : tab.notifications }}
+          {{ tab.notifications > 9 ? '9+' : tab.notifications }}
         </div>
         <IconButton
           :icon="{ prefix: 'fas', iconName: tab.icon }"
           :iconStyle="{
             width: '28px',
             height: '28px',
-            color: tab.id === activeId ? '#2e77f2' : '#999999'
+            color: tab.id === activeId ? '#2e77f2' : '#999999',
           }"
           :tip="tab.tip"
           @click="activeId = tab.id"
@@ -28,13 +28,13 @@
 </template>
 
 <script>
-import IconButton from "./IconButton.vue";
-import { mapGetters } from "vuex";
+import IconButton from './IconButton.vue';
+import { mapGetters } from 'vuex';
 
 export default {
-  name: "Tabs",
+  name: 'Tabs',
   components: {
-    IconButton
+    IconButton,
   },
   data() {
     return {
@@ -42,57 +42,55 @@ export default {
       tabs: [
         {
           id: 0,
-          iconPrefix: "fas",
-          icon: "home",
-          tip: "Home",
-          notifications: 0
+          iconPrefix: 'fas',
+          icon: 'home',
+          tip: 'Home',
+          notifications: 0,
         },
         {
           id: 1,
-          iconPrefix: "far",
-          icon: "flag",
-          tip: "Pages",
-          notifications: 0
+          iconPrefix: 'far',
+          icon: 'flag',
+          tip: 'Pages',
+          notifications: 0,
         },
         {
           id: 2,
-          iconPrefix: "far",
-          icon: "play-circle",
-          tip: "Watch",
-          notifications: 0
+          iconPrefix: 'far',
+          icon: 'play-circle',
+          tip: 'Watch',
+          notifications: 0,
         },
         {
           id: 3,
-          iconPrefix: "fas",
-          icon: "store-alt",
-          tip: "Marketplace",
-          notifications: 0
+          iconPrefix: 'fas',
+          icon: 'store-alt',
+          tip: 'Marketplace',
+          notifications: 0,
         },
         {
           id: 4,
-          iconPrefix: "fas",
-          icon: "gamepad",
-          tip: "Gaming",
-          notifications: 0
-        }
-      ]
+          iconPrefix: 'fas',
+          icon: 'gamepad',
+          tip: 'Gaming',
+          notifications: 0,
+        },
+      ],
     };
   },
   computed: mapGetters({
-    notifications: "notifications"
+    notifications: 'notifications',
   }),
   mounted() {
-    this.$store.dispatch("fetchNotifications");
+    this.$store.dispatch('fetchNotifications');
   },
   watch: {
     notifications(newNotifications) {
       this.tabs.forEach(tab => {
-        tab.notifications = newNotifications.notifications.find(
-          i => i.id === tab.id
-        ).num;
+        tab.notifications = newNotifications.notifications.find(i => i.id === tab.id).num;
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -129,8 +127,8 @@ export default {
   top: 10%;
   left: 58%;
   font-size: 13px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
   height: 19px;
   width: 19px;
   z-index: 10;

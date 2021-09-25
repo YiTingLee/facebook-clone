@@ -1,9 +1,9 @@
-import { createApp } from "vue";
-import App from "./App.vue";
+import { createApp } from 'vue';
+import App from './App.vue';
 
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import {
   faBars,
   faBell,
@@ -28,9 +28,9 @@ import {
   faTint,
   faUserFriends,
   faUsers,
-  faVideo
-} from "@fortawesome/free-solid-svg-icons";
-import store from "./store";
+  faVideo,
+} from '@fortawesome/free-solid-svg-icons';
+import store from './store';
 
 library.add(
   faFacebook,
@@ -63,5 +63,5 @@ library.add(
 
 createApp(App)
   .use(store)
-  .component("font-awesome-icon", FontAwesomeIcon)
-  .mount("#app");
+  .component('font-awesome-icon', FontAwesomeIcon)
+  .mount('#app');

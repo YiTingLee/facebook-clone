@@ -5,13 +5,13 @@
 </template>
 
 <script>
-import Contacts from "./Contacts.vue";
+import Contacts from './Contacts.vue';
 
 export default {
-  name: "RightBar",
+  name: 'RightBar',
   components: {
-    Contacts
-  }
+    Contacts,
+  },
 };
 </script>
 

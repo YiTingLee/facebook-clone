@@ -1,9 +1,5 @@
 <template>
-  <div
-    :class="$style.container"
-    @mouseover="isHover = true"
-    @mouseleave="isHover = false"
-  >
+  <div :class="$style.container" @mouseover="isHover = true" @mouseleave="isHover = false">
     <div :class="$style.image_container">
       <font-awesome-icon v-if="!image" :style="iconStyle" :icon="icon" />
       <img v-else :src="image" :style="iconStyle" />
@@ -16,38 +12,38 @@
 
 <script>
 export default {
-  name: "IconButton",
+  name: 'IconButton',
   props: {
     icon: {
       type: Object,
-      default: () => ({ prefix: "fas", iconName: "search" })
+      default: () => ({ prefix: 'fas', iconName: 'search' }),
     },
     iconStyle: {
       type: Object,
-      default: () => ({ width: "20px", height: "20px", color: "#000000" })
+      default: () => ({ width: '20px', height: '20px', color: '#000000' }),
     },
     label: {
       type: String,
-      default: null
+      default: null,
     },
     tip: {
       type: String,
-      default: null
+      default: null,
     },
     image: {
       type: String,
-      default: null
+      default: null,
     },
     isOnline: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   data() {
     return {
-      isHover: false
+      isHover: false,
     };
-  }
+  },
 };
 </script>
 
@@ -68,8 +64,8 @@ export default {
 
 .label {
   font-size: 15px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
 }
 
 .tip {
