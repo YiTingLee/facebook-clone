@@ -12,6 +12,7 @@
       ></IconButton>
       <div :class="$style.text">What's on your mind, {{ user.userName }}?</div>
     </div>
+    <Line></Line>
   </Card>
 </template>
 
@@ -19,11 +20,13 @@
 import { mapGetters } from 'vuex';
 import Card from './Card.vue';
 import IconButton from './IconButton.vue';
+import Line from './Line.vue';
 export default {
   name: 'PostCreator',
   components: {
     Card,
     IconButton,
+    Line,
   },
   computed: mapGetters({ user: 'user' }),
 };
