@@ -124,8 +124,8 @@ export default {
 
 .notifications {
   position: absolute;
-  top: 10%;
-  left: 58%;
+  top: 15%;
+  left: 56%;
   font-size: 13px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
     'Helvetica Neue', sans-serif;

@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.container" @mouseover="isHover = true" @mouseleave="isHover = false">
-    <div :class="$style.image_container">
+    <div :class="$style.image_container" :style="iconStyle">
       <font-awesome-icon v-if="!image" :style="iconStyle" :icon="icon" />
       <img v-else :src="image" :style="iconStyle" />
       <div v-if="isOnline" :class="$style.online"></div>
@@ -101,7 +101,7 @@ export default {
   background: #31a24c;
   border-radius: 15px;
   border: 2px solid #f0f2f5;
-  bottom: 0px;
-  right: 0px;
+  bottom: -2px;
+  right: -2px;
 }
 </style>

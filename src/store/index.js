@@ -7,7 +7,7 @@ const store = createStore({
       userId: 'eric',
       userName: 'Eric',
       token: 'token',
-      image: require('../assets/logo.png'),
+      image: require('../assets/person.png'),
     },
     notifications: [],
     friends: [],
