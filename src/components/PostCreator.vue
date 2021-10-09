@@ -13,6 +13,35 @@
       <div :class="$style.text">What's on your mind, {{ user.userName }}?</div>
     </div>
     <Line></Line>
+    <div :class="$style.butotn_box">
+      <IconButton
+        :class="$style.button"
+        :iconStyle="{
+          width: '24px',
+          height: '24px',
+        }"
+        label="Photo/Video"
+        :image="user.image"
+      ></IconButton>
+      <IconButton
+        :class="$style.button"
+        :iconStyle="{
+          width: '24px',
+          height: '24px',
+        }"
+        label="Tag Friends"
+        :image="user.image"
+      ></IconButton>
+      <IconButton
+        :class="$style.button"
+        :iconStyle="{
+          width: '24px',
+          height: '24px',
+        }"
+        label="Feeling/Activity"
+        :image="user.image"
+      ></IconButton>
+    </div>
   </Card>
 </template>
 
@@ -56,7 +85,19 @@ export default {
   align-items: center;
 }
 
+.button:hover,
 .text:hover {
   background-color: #e4e6eb;
+}
+
+.butotn_box {
+  display: flex;
+}
+
+.button {
+  flex: 1;
+  height: 40px;
+  padding: 8px;
+  border-radius: 12px;
 }
 </style>
