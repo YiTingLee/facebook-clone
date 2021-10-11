@@ -19,28 +19,40 @@
         :iconStyle="{
           width: '24px',
           height: '24px',
+          color: '#45BD62',
         }"
-        label="Photo/Video"
-        :image="user.image"
-      ></IconButton>
+        :icon="{ prefix: 'fas', iconName: 'images' }"
+      >
+        <template v-slot:label>
+          <span :class="$style.button_label">Photo/Video</span>
+        </template>
+      </IconButton>
       <IconButton
         :class="$style.button"
         :iconStyle="{
           width: '24px',
           height: '24px',
+          color: '#1877F2',
         }"
-        label="Tag Friends"
-        :image="user.image"
-      ></IconButton>
+        :icon="{ prefix: 'fas', iconName: 'user-tag' }"
+      >
+        <template v-slot:label>
+          <span :class="$style.button_label">Tag Friends</span>
+        </template></IconButton
+      >
       <IconButton
         :class="$style.button"
         :iconStyle="{
           width: '24px',
           height: '24px',
+          color: '#F7B928',
         }"
-        label="Feeling/Activity"
-        :image="user.image"
-      ></IconButton>
+        :icon="{ prefix: 'fas', iconName: 'smile' }"
+      >
+        <template v-slot:label>
+          <span :class="$style.button_label">Feeling/Activity</span>
+        </template></IconButton
+      >
     </div>
   </Card>
 </template>
@@ -74,8 +86,6 @@ export default {
 
 .text {
   flex: 1;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-    'Helvetica Neue', sans-serif;
   color: #64676b;
   background-color: #eff2f5;
   border-radius: 18px;
@@ -99,5 +109,12 @@ export default {
   height: 40px;
   padding: 8px;
   border-radius: 12px;
+}
+
+.button_label {
+  color: #65676b;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.3;
 }
 </style>

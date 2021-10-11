@@ -5,6 +5,7 @@
       <img v-else :src="image" :style="iconStyle" />
       <div v-if="isOnline" :class="$style.online"></div>
     </div>
+    <slot v-if="hasLabelSlot" name="label"></slot>
     <div :class="$style.label" v-if="label">{{ label }}</div>
     <div :class="$style.tip" v-if="tip && isHover">{{ tip }}</div>
   </div>
@@ -44,6 +45,11 @@ export default {
       isHover: false,
     };
   },
+  computed: {
+    hasLabelSlot() {
+      return !!this.$slots.label;
+    },
+  },
 };
 </script>
 
@@ -64,8 +70,6 @@ export default {
 
 .label {
   font-size: 15px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-    'Helvetica Neue', sans-serif;
 }
 
 .tip {
@@ -80,7 +84,6 @@ export default {
   animation-delay: 1s;
   animation-fill-mode: forwards;
   font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   white-space: nowrap;
   z-index: 10;
 }

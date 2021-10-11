@@ -17,11 +17,13 @@ import {
   faFlag,
   faGamepad,
   faHome,
+  faImages,
   faPlayCircle,
   faPlus,
   faPoll,
   faSchool,
   faSearch,
+  faSmile,
   faSortDown,
   faStar,
   faStoreAlt,
@@ -30,6 +32,7 @@ import {
   faTint,
   faUserFriends,
   faUsers,
+  faUserTag,
   faVideo,
 } from '@fortawesome/free-solid-svg-icons';
 import store from './store';
@@ -62,7 +65,10 @@ library.add(
   faTags,
   faEllipsisH,
   faPlus,
-  faArrowRight
+  faArrowRight,
+  faImages,
+  faUserTag,
+  faSmile
 );
 
 createApp(App)

@@ -127,8 +127,6 @@ export default {
   top: 15%;
   left: 56%;
   font-size: 13px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-    'Helvetica Neue', sans-serif;
   height: 19px;
   width: 19px;
   z-index: 10;

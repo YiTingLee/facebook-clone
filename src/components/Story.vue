@@ -70,8 +70,6 @@ img {
 }
 
 .footer_title {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-    'Helvetica Neue', sans-serif;
   font-size: 13px;
   font-weight: 600;
   line-height: 16px;
@@ -93,8 +91,6 @@ img {
   left: 12px;
   bottom: 12px;
   color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-    'Helvetica Neue', sans-serif;
 }
 
 .user_icon {
