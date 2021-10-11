@@ -7,13 +7,17 @@
       <RightBar></RightBar>
     </div>
   </div>
+  <PostModal v-if="postModal" @hide="hidePostModal()"></PostModal>
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex';
+
 import Header from './components/Header.vue';
 import LeftBar from './components/LeftBar.vue';
 import RightBar from './components/RightBar.vue';
 import Main from './components/Main.vue';
+import PostModal from './components/PostModal.vue';
 
 export default {
   name: 'App',
@@ -22,7 +26,10 @@ export default {
     LeftBar,
     RightBar,
     Main,
+    PostModal,
   },
+  computed: mapGetters({ postModal: 'postModal' }),
+  methods: { ...mapMutations({ hidePostModal: 'HIDE_POST_MODAL' }) },
 };
 </script>
 

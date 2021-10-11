@@ -12,6 +12,7 @@ const store = createStore({
     notifications: [],
     friends: [],
     stories: [],
+    postModal: false,
   },
   getters: {
     notifications(state) {
@@ -26,6 +27,9 @@ const store = createStore({
     stories(state) {
       return state.stories;
     },
+    postModal(state) {
+      return state.postModal;
+    },
   },
   mutations: {
     SAVE_NOTIFICATIONS(state, notifications) {
@@ -36,6 +40,12 @@ const store = createStore({
     },
     SAVE_STORIES(state, stories) {
       state.stories = stories;
+    },
+    SHOW_POST_MODAL(state) {
+      state.postModal = true;
+    },
+    HIDE_POST_MODAL(state) {
+      state.postModal = false;
     },
   },
   actions: {

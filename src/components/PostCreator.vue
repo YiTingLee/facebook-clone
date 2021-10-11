@@ -10,7 +10,7 @@
         }"
         :image="user.image"
       ></IconButton>
-      <div :class="$style.text">What's on your mind, {{ user.userName }}?</div>
+      <div :class="$style.text" @click="showPostModal()">What's on your mind, {{ user.userName }}?</div>
     </div>
     <Line></Line>
     <div :class="$style.butotn_box">
@@ -38,8 +38,8 @@
       >
         <template v-slot:label>
           <span :class="$style.button_label">Tag Friends</span>
-        </template></IconButton
-      >
+        </template>
+      </IconButton>
       <IconButton
         :class="$style.button"
         :iconStyle="{
@@ -51,14 +51,14 @@
       >
         <template v-slot:label>
           <span :class="$style.button_label">Feeling/Activity</span>
-        </template></IconButton
-      >
+        </template>
+      </IconButton>
     </div>
   </Card>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
 import Card from './Card.vue';
 import IconButton from './IconButton.vue';
 import Line from './Line.vue';
@@ -70,6 +70,7 @@ export default {
     Line,
   },
   computed: mapGetters({ user: 'user' }),
+  methods: { ...mapMutations({ showPostModal: 'SHOW_POST_MODAL' }) },
 };
 </script>
 

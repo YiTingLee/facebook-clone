@@ -29,6 +29,7 @@ import {
   faStoreAlt,
   faSuitcase,
   faTags,
+  faTimes,
   faTint,
   faUserFriends,
   faUsers,
@@ -68,7 +69,8 @@ library.add(
   faArrowRight,
   faImages,
   faUserTag,
-  faSmile
+  faSmile,
+  faTimes
 );
 
 createApp(App)
