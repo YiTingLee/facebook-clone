@@ -7,7 +7,9 @@
     </div>
     <slot v-if="hasLabelSlot" name="label"></slot>
     <div :class="$style.label" v-if="label">{{ label }}</div>
-    <div :class="$style.tip" v-if="tip && isHover">{{ tip }}</div>
+    <div :class="[$style.tip, tipPosition === 'Top' ? $style.tip_top : $style.tip_bottom]" v-if="tip && isHover">
+      {{ tip }}
+    </div>
   </div>
 </template>
 
@@ -30,6 +32,10 @@ export default {
     tip: {
       type: String,
       default: null,
+    },
+    tipPosition: {
+      type: String, // Only Top and Bottom
+      default: 'Bottom',
     },
     image: {
       type: String,
@@ -78,7 +84,6 @@ export default {
   position: absolute;
   padding: 6px 12px;
   border-radius: 6px;
-  top: 60px;
   opacity: 0;
   animation: opacity 0.3s;
   animation-delay: 1s;
@@ -86,6 +91,14 @@ export default {
   font-size: 14px;
   white-space: nowrap;
   z-index: 10;
+}
+
+.tip_top {
+  bottom: 40px;
+}
+
+.tip_bottom {
+  top: 60px;
 }
 
 @keyframes opacity {

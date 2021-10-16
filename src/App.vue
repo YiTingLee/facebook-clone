@@ -7,7 +7,7 @@
       <RightBar></RightBar>
     </div>
   </div>
-  <PostModal v-if="postModal" @hide="hidePostModal()"></PostModal>
+  <PostModal v-if="postModal" @hide="hidePostModal()" @post="hidePostModal()"></PostModal>
 </template>
 
 <script>

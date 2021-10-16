@@ -18,6 +18,8 @@ import {
   faGamepad,
   faHome,
   faImages,
+  faMapMarkerAlt,
+  faMicrophone,
   faPlayCircle,
   faPlus,
   faPoll,
@@ -70,7 +72,9 @@ library.add(
   faImages,
   faUserTag,
   faSmile,
-  faTimes
+  faTimes,
+  faMapMarkerAlt,
+  faMicrophone
 );
 
 createApp(App)
