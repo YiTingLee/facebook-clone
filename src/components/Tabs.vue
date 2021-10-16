@@ -94,7 +94,7 @@ export default {
 };
 </script>
 
-<style module>
+<style module lang="scss">
 .tabs {
   display: flex;
   align-items: center;
@@ -116,10 +116,10 @@ export default {
   height: 53px;
   border-radius: 12px;
   position: relative;
-}
 
-.tab:hover {
-  background-color: #e4e6eb;
+  &:hover {
+    background-color: #e4e6eb;
+  }
 }
 
 .notifications {

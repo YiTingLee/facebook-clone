@@ -18,7 +18,7 @@ export default {
 };
 </script>
 
-<style module>
+<style module lang="scss">
 .search_bar {
   width: 252px;
   height: 40px;

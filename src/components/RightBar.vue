@@ -15,7 +15,7 @@ export default {
 };
 </script>
 
-<style module>
+<style module lang="scss">
 .right_bar {
   min-width: 280px;
   width: 360px;

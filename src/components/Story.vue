@@ -42,7 +42,7 @@ export default {
 };
 </script>
 
-<style module>
+<style module lang="scss">
 .container {
   width: 130px;
   height: 230px;

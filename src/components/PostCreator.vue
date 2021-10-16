@@ -74,7 +74,7 @@ export default {
 };
 </script>
 
-<style module>
+<style module lang="scss">
 .head {
   display: flex;
   gap: 6px;
@@ -94,11 +94,10 @@ export default {
   cursor: pointer;
   display: flex;
   align-items: center;
-}
 
-.button:hover,
-.text:hover {
-  background-color: #e4e6eb;
+  &:hover {
+    background-color: #e4e6eb;
+  }
 }
 
 .butotn_box {
@@ -110,6 +109,10 @@ export default {
   height: 40px;
   padding: 8px;
   border-radius: 12px;
+
+  &:hover {
+    background-color: #e4e6eb;
+  }
 }
 
 .button_label {

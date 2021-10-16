@@ -8,7 +8,7 @@ export default {
 };
 </script>
 
-<style module>
+<style module lang="scss">
 .line {
   width: 100%;
   height: 1px;

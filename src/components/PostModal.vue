@@ -51,7 +51,7 @@ export default {
 };
 </script>
 
-<style module>
+<style module lang="scss">
 .background {
   position: fixed;
   background-color: rgb(244, 244, 244, 0.8);
@@ -93,10 +93,10 @@ export default {
   top: 12px;
   right: 16px;
   cursor: pointer;
-}
 
-.close_button:hover {
-  background-color: #d4d6db;
+  &:hover {
+    background-color: #d4d6db;
+  }
 }
 
 .line {
@@ -120,13 +120,13 @@ export default {
   height: 154px;
   border: none;
   font-size: 22px;
-}
 
-.text_input::placeholder {
-  color: #65676b;
-}
+  &::placeholder {
+    color: #65676b;
+  }
 
-.text_input:focus-visible {
-  outline: none;
+  &:focus-visible {
+    outline: none;
+  }
 }
 </style>

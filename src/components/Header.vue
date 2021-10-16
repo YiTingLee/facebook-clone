@@ -67,7 +67,7 @@ export default {
 };
 </script>
 
-<style module>
+<style module lang="scss">
 .header {
   height: 56px;
   background-color: #ffffff;
@@ -102,10 +102,10 @@ export default {
   height: 40px;
   background-color: #e4e6eb;
   border-radius: 20px;
-}
 
-.icon_button:hover {
-  background-color: #d4d6db;
+  &:hover {
+    background-color: #d4d6db;
+  }
 }
 
 .user_button {
@@ -115,9 +115,9 @@ export default {
   display: flex;
   justify-content: flex-start;
   padding: 0 12px;
-}
 
-.user_button:hover {
-  background-color: #e4e6eb;
+  &:hover {
+    background-color: #e4e6eb;
+  }
 }
 </style>

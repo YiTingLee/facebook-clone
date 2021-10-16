@@ -33,7 +33,7 @@ export default {
 };
 </script>
 
-<style module>
+<style module lang="scss">
 .app {
   background-color: #f0f2f5;
   height: 100vh;

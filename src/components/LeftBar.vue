@@ -146,7 +146,7 @@ export default {
 };
 </script>
 
-<style module>
+<style module lang="scss">
 .left_bar {
   min-width: 280px;
   width: 360px;
@@ -166,9 +166,9 @@ export default {
   gap: 12px;
   padding: 0 8px;
   border-radius: 5px;
-}
 
-.page:hover {
-  background-color: #e4e6eb;
+  &:hover {
+    background-color: #e4e6eb;
+  }
 }
 </style>

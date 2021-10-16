@@ -31,7 +31,7 @@ export default {
 };
 </script>
 
-<style module>
+<style module lang="scss">
 .container {
   position: relative;
   display: flex;
@@ -50,9 +50,9 @@ export default {
   border-radius: 20px;
   border: 1px solid #ddd;
   z-index: 10;
-}
 
-.arrow_butotn:hover {
-  background-color: #e4e6eb;
+  &:hover {
+    background-color: #e4e6eb;
+  }
 }
 </style>

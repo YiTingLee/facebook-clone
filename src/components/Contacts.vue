@@ -59,7 +59,7 @@ export default {
 };
 </script>
 
-<style module>
+<style module lang="scss">
 .contacts_container {
   padding: 12px 8px;
   width: 100%;
@@ -92,10 +92,9 @@ export default {
   width: 32px;
   height: 32px;
   border-radius: 20px;
-}
-
-.icon_button:hover {
-  background-color: #d4d6db;
+  &:hover {
+    background-color: #d4d6db;
+  }
 }
 
 .friends_container {
@@ -112,9 +111,9 @@ export default {
   display: flex;
   justify-content: flex-start;
   border-radius: 6px;
-}
 
-.friend:hover {
-  background-color: #e4e6eb;
+  &:hover {
+    background-color: #e4e6eb;
+  }
 }
 </style>

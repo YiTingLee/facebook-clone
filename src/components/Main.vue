@@ -17,4 +17,4 @@ export default {
 };
 </script>
 
-<style module></style>
+<style module lang="scss"></style>

@@ -10,7 +10,7 @@ export default {
 };
 </script>
 
-<style module>
+<style module lang="scss">
 .container {
   width: 100%;
   padding: 12px 16px 10px 16px;
