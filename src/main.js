@@ -31,6 +31,7 @@ import {
   faStoreAlt,
   faSuitcase,
   faTags,
+  faThumbsUp,
   faTimes,
   faTint,
   faUserFriends,
@@ -74,7 +75,8 @@ library.add(
   faSmile,
   faTimes,
   faMapMarkerAlt,
-  faMicrophone
+  faMicrophone,
+  faThumbsUp
 );
 
 createApp(App)

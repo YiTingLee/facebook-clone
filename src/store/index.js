@@ -1,5 +1,5 @@
 import { createStore } from 'vuex';
-import { friendsApi, notificationsApi, storiesApi } from '../mock/mockApi';
+import { friendsApi, notificationsApi, postsApi, storiesApi } from '../mock/mockApi';
 
 const store = createStore({
   state: {
@@ -13,6 +13,7 @@ const store = createStore({
     friends: [],
     stories: [],
     postModal: false,
+    posts: [],
   },
   getters: {
     notifications(state) {
@@ -29,6 +30,9 @@ const store = createStore({
     },
     postModal(state) {
       return state.postModal;
+    },
+    posts(state) {
+      return state.posts;
     },
   },
   mutations: {
@@ -47,6 +51,9 @@ const store = createStore({
     HIDE_POST_MODAL(state) {
       state.postModal = false;
     },
+    SAVE_POSTS(state, posts) {
+      state.posts = posts;
+    },
   },
   actions: {
     async fetchNotifications({ state, commit }) {
@@ -61,6 +68,10 @@ const store = createStore({
       const stories = await storiesApi(state.userToken);
       stories.unshift({ id: -1, image: require('../assets/person.png'), hasAddFunction: true });
       commit('SAVE_STORIES', stories);
+    },
+    async fetchPosts({ state, commit }) {
+      const stories = await postsApi(state.userToken);
+      commit('SAVE_POSTS', stories);
     },
   },
 });

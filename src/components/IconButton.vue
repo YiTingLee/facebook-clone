@@ -72,6 +72,9 @@ export default {
 
 .image_container {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .label {

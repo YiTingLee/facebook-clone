@@ -132,3 +132,101 @@ export const storiesApi = async userToken => {
     },
   ]);
 };
+
+export const postsApi = async userToken => {
+  return Promise.resolve([
+    {
+      id: 1,
+      userId: 1,
+      userName: 'Penny',
+      userImage: require('../assets/person.png'),
+      audience: 'public',
+      content: 'Hello, here is Content.',
+      image: '',
+      createdTime: 1634407914165,
+      like: 250,
+      comments: [
+        {
+          userId: 2,
+          userName: 'Eric',
+          userImage: require('../assets/person.png'),
+          comment: 'Hi',
+          like: 0,
+          createdTime: 1634407914165,
+        },
+        {
+          userId: 1,
+          userName: 'Penny',
+          userImage: require('../assets/person.png'),
+          comment: 'Hi, Eric',
+          like: 1,
+          createdTime: 1634407914165,
+        },
+      ],
+      comment: 2,
+      share: 3,
+    },
+    {
+      id: 2,
+      userId: 1,
+      userName: 'Penny',
+      userImage: require('../assets/person.png'),
+      audience: 'public',
+      content: 'Hello, here is Content.',
+      image: '',
+      createdTime: 1634407914165,
+      like: 250,
+      comments: [
+        {
+          userId: 2,
+          userName: 'Eric',
+          userImage: require('../assets/person.png'),
+          comment: 'Hi',
+          like: 0,
+          createdTime: 1634407914165,
+        },
+        {
+          userId: 1,
+          userName: 'Penny',
+          userImage: require('../assets/person.png'),
+          comment: 'Hi, Eric',
+          like: 1,
+          createdTime: 1634407914165,
+        },
+      ],
+      comment: 2,
+      share: 3,
+    },
+    {
+      id: 3,
+      userId: 1,
+      userName: 'Penny',
+      userImage: require('../assets/person.png'),
+      audience: 'public',
+      content: 'Hello, here is Content.',
+      image: '',
+      createdTime: 1634407914165,
+      like: 250,
+      comments: [
+        {
+          userId: 2,
+          userName: 'Eric',
+          userImage: require('../assets/person.png'),
+          comment: 'Hi',
+          like: 0,
+          createdTime: 1634407914165,
+        },
+        {
+          userId: 1,
+          userName: 'Penny',
+          userImage: require('../assets/person.png'),
+          comment: 'Hi, Eric',
+          like: 1,
+          createdTime: 1634407914165,
+        },
+      ],
+      comment: 2,
+      share: 3,
+    },
+  ]);
+};
