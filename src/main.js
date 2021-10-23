@@ -38,6 +38,8 @@ import {
   faUsers,
   faUserTag,
   faVideo,
+  faCommentAlt,
+  faShare
 } from '@fortawesome/free-solid-svg-icons';
 import store from './store';
 
@@ -76,7 +78,9 @@ library.add(
   faTimes,
   faMapMarkerAlt,
   faMicrophone,
-  faThumbsUp
+  faThumbsUp,
+  faCommentAlt,
+  faShare
 );
 
 createApp(App)

@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.container">
-    <img :src="image" />
+    <img :class="$style.image" :src="image" />
     <div v-if="hasAddFunction" :class="$style.footer">
       <IconButton
         :class="$style.add_icon"
@@ -50,7 +50,7 @@ export default {
   cursor: pointer;
 }
 
-img {
+.image {
   width: 100%;
   height: 100%;
   border-radius: 10px;

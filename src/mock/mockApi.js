@@ -142,9 +142,10 @@ export const postsApi = async userToken => {
       userImage: require('../assets/person.png'),
       audience: 'public',
       content: 'Hello, here is Content.',
-      image: '',
+      image: require('../assets/101night.jpg'),
       createdTime: 1634407914165,
       like: 250,
+      liked: true,
       comments: [
         {
           userId: 2,
@@ -176,6 +177,7 @@ export const postsApi = async userToken => {
       image: '',
       createdTime: 1634407914165,
       like: 250,
+      liked: false,
       comments: [
         {
           userId: 2,
@@ -207,6 +209,7 @@ export const postsApi = async userToken => {
       image: '',
       createdTime: 1634407914165,
       like: 250,
+      liked: true,
       comments: [
         {
           userId: 2,
