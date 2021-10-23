@@ -69,6 +69,7 @@ export default {
 
 <style module lang="scss">
 .header {
+  width: 100%;
   height: 56px;
   background-color: #ffffff;
   padding: 0 16px;

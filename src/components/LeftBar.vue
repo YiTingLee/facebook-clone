@@ -148,9 +148,6 @@ export default {
 
 <style module lang="scss">
 .left_bar {
-  min-width: 280px;
-  width: 360px;
-  height: 100%;
   padding: 8px;
   overflow-y: scroll;
 }

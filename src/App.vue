@@ -1,10 +1,12 @@
 <template>
   <div :class="$style.app">
-    <Header></Header>
+    <Header :class="$style.header"></Header>
     <div :class="$style.main_container">
-      <LeftBar></LeftBar>
+      <LeftBar :class="$style.left_bar"></LeftBar>
+      <div :class="$style.left_bar_shadow"></div>
       <Main></Main>
-      <RightBar></RightBar>
+      <RightBar :class="$style.right_bar"></RightBar>
+      <div :class="$style.right_bar_shadow"></div>
     </div>
   </div>
   <PostModal v-if="postModal" @hide="hidePostModal()" @post="hidePostModal()"></PostModal>
@@ -36,7 +38,6 @@ export default {
 <style module lang="scss">
 .app {
   background-color: #f0f2f5;
-  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -45,6 +46,40 @@ export default {
   display: flex;
   justify-content: space-between;
   flex: 1;
-  height: calc(100% - 56px); /* minus header */
+  margin: 56px;
+}
+
+.header,
+.left_bar,
+.right_bar {
+  position: fixed;
+  z-index: 100;
+}
+
+.left_bar_shadow,
+.right_bar_shadow {
+  position: static;
+}
+
+.left_bar_shadow,
+.right_bar_shadow,
+.left_bar,
+.right_bar {
+  min-width: 280px;
+  width: 360px;
+  height: calc(100% - 56px);
+  background-color: #f0f2f5;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+
+.left_bar {
+  left: 0;
+}
+
+.right_bar {
+  right: 0;
 }
 </style>
