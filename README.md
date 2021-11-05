@@ -1,5 +1,5 @@
-# facebook
-
+# facebook-clone
+Using Vue to build a facebook clone app.
 ## Project setup
 ```
 yarn install
